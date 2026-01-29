@@ -1,0 +1,21 @@
+{
+    "mqtt": {
+      "broker": "tcp://127.0.0.1:1883",
+      "client_id": "imx6ul-ibutton-01",
+      "username": "",
+      "password": "",
+      "topic_cmd": "board/ibutton/command",
+      "topic_state": "board/ibutton/state",
+      "qos": 1
+    },
+    "w1": {
+      "devices_dir": "/sys/bus/w1/devices",
+      "exclude": ["w1_bus_master1"],
+      "family_filter": ["01"]  // empty array means accept any 1-Wire family
+    },
+    "test": {
+      "default_timeout_ms": 10000,
+      "debounce_ms": 100
+    }
+  }
+  

@@ -1,0 +1,13 @@
+[Unit]
+Description=iButton Interface Tester
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ibutton-tester -v -c /etc/epoint-test/ibutton.json
+Restart=always
+RestartSec=2
+User=root
+
+[Install]
+WantedBy=multi-user.target
